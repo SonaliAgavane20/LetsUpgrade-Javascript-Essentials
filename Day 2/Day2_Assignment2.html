@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <script>
+        //String Methods in JS
+        var str = "Welcome to LestUpgrade Javascript Essential Tutorials"
+        console.log(str)
+        console.log("Length of string : "+str.length)
+        console.log("index of of LestUpgrade in string : "+str.indexOf("LestUpgrade"))
+        console.log("slice method of string : "+str.slice(11, 23))
+        console.log("substring method of string : "+str.substring(11, 23))
+        console.log("replace method of string : "+str.replace("Javascript", "JS"))
+        console.log("uppercase method of string : "+str.toUpperCase())
+        console.log("lowercase method of string : "+str.toLowerCase())
+
+        //Array methods in JS
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        console.log("Array of fruits : "+fruits)
+        fruits.pop();
+        console.log("After pop : "+fruits)
+        fruits.push("Kiwi");
+        console.log("After push : "+fruits)
+        fruits.shift();            // Removes the first element from fruits
+        console.log("After shift : "+fruits)
+        fruits.splice(2, 2, "Lemon");; //first parameter defines position, second defines how many elements to remove, third adds new element in array
+        console.log("After splice : "+fruits)
+        var veggies = ["tomato", "potato"]
+        console.log("after concat : "+fruits.concat(veggies))
+    </script>
+</body>
+</html>
