@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <script>
+        var name = prompt("Enter OS name and version : ");
+        var nameandversion =  name.split(" ");
+        var nameArray = new Array();
+        for(var i = 0; i<nameandversion.length; i++){
+            nameArray.push(nameandversion[i]);
+        }
+        console.log("The OS name is "+nameArray[0]+" and version is "+nameArray[1]);
+
+    </script>
+</body>
+</html>
