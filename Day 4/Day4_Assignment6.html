@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation of number greater than 100</title>
+</head>
+<body>
+    <script>
+        let Num;
+        let condition
+        do {
+            Num = prompt("Enter a number greater the 100");
+            condition =( Num == null)?true: (Num.trim().length == 0) ? true : (parseInt(Num) <= 100) ? true : false
+            }
+        while (condition);
+        console.log(`Validation Completed \nNumber=${Num}`);
+    </script>
+</body>
+</html>

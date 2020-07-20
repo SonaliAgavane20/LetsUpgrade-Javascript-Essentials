@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create a new array called shoppingBasket, that will be a copy of the shoppingList array, and add some
+            new products into it.
+            </title>
+    </head>
+    <body>
+        <script>
+            var shoppingList = [];
+            var size = prompt('Enter number of items you want in shopping list: ' )
+
+            for(var i=0; i<size; i++) {
+                
+                shoppingList[i] = prompt('Enter Element ' + (i+1));
+            }
+            document.write("Your shopping list:",shoppingList)
+            console.log(shoppingList);
+
+            var shoppingBasket =[];
+            var newlist = [];
+            var len = prompt('Enter number of items you want to add in shopping basket: ' )
+            for(var i=0; i<len; i++) {
+                
+                newlist[i] = prompt('Enter Element ' + (i+1));
+            }
+            document.write("<br/>New items in the basket:",newlist)
+            console.log(newlist);
+            shoppingBasket= shoppingList.concat(newlist);
+            document.write("<br/>shopping basket items:",shoppingBasket)
+            console.log(shoppingBasket);
+        </script>
+    </body>
+</html>

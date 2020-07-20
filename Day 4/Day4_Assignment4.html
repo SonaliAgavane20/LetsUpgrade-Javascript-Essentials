@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Make a Calculator in Javascript which can do operations as Addtion, Subtraction, Multiplication, Division,
+            Square root, Percentage
+            </title>
+    </head>
+    <body>
+        <script>
+            function calculator(){
+            var num1 =Number(document.getElementById("first_num").value);
+            var num2 =Number(document.getElementById("second_num").value);
+            var expression = Number(document.getElementById("arithmetic_operation").value);
+            switch(expression) {
+                case 1:
+                    document.write("Addition:", num1+num2)
+                    break;
+                case 2:
+                    document.write("Subtraction:", num1-num2)
+                    break;
+                case 3:
+                    document.write("Multiplication:", num1*num2)
+                    break;
+                case 4:
+                    document.write("Division:", num1/num2)
+                    break;
+                case 5:
+                    document.write("square root of num1: ", Math.sqrt(num1),"<br/> square root of num2: ", Math.sqrt(num2))
+                    break;
+                case 6:
+                    document.write("percentage of num1: ", num1/100,"<br/> percentage of num2: ", num2/100)
+                    break;
+                default:
+                    document.write("Enter valid input:")
+                }
+        }
+        </script>
+        Enter First Number:<input id="first_num"><br />
+        Enter Second Number:<input id="second_num"><br />
+        Select operation to be performed on given numbers:<br />
+        1 for Addtion<br />
+        2 for Subtraction<br />
+        3 for Multiplication<br />
+        4 for Division<br />
+        5 for Square root<br />
+        6 for Percentage<br />
+        <input id="arithmetic_operation"><br />
+        <button onclick="calculator()">Click me</button>
+    </body>
+</html>
