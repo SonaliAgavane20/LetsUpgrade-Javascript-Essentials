@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises/Async Await/Fetch</title>
+</head>
+<body>
+    <script>
+    const todoData = new Promise((resolve,reject)=>{
+    const error = false;
+
+    if(error){
+         reject("an error occured");
+     }
+     else{
+          resolve({
+              async function(){
+                const response = await fetch('http://jsonplaceholder.typicode.com/todos');
+                const data = await response.json();
+              }
+            
+         })
+    }
+    });
+    todoData
+    .then(data=>log(data))
+    .catch(error=>console.log(error))
+
+    </script>
+</body>
+</html>

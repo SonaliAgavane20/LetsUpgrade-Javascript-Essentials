@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+<body>
+    <script>
+    //Creating a class user with name,age and email
+    class User{
+        constructor(name,age,email){
+            this.name = name;
+            this.age = age;
+            this.email = email;
+            this.courses = [];
+        }
+        login(){
+            console.log(`${this.name} has logged in`)
+        }
+        logout(){
+            console.log(`${this.name} has logged out`)
+        }
+        getDetails(){
+        console.log(`Name is ${this.name}, email is ${this.email}`);
+        }
+    }
+    //Creating class Moderator which extends the properties of class User
+    class Moderator extends User{
+        constructor(name,age,email,coins){
+            super(name,age,email);
+            this.coins = 0;
+        }
+        addCoins(coins){
+            this.coins+=coins;
+            console.log(`After adding ${coins} coins, ${this.name} has total ${this.coins} coins`)
+        }
+        removeCoins(coins){
+            this.coins-=coins;
+            console.log(`After removing ${coins} coins, ${this.name} has total ${this.coins} coins`)
+        }
+    }
+    //Creating class admin which extends both class moderator and class User
+    class Admin extends Moderator{
+        addCourse(user,course){
+            user.courses.push(course);
+            console.log(user);
+            }
+        removeCourse(user,course){
+            user.courses.pop(course);
+            console.log(user);
+            }
+    }
+
+    let user1 = new User('Ankita',25,'ankita@gmail.com')
+    let user2 = new User('Neha',25,'neha@gmai.com')
+    let mod = new Moderator('Prerna',24,'prerna@gmail.com',5000);
+    let admin = new Admin('Shanyola',23,'shan@gmail.com');
+    user1.login();
+    user1.getDetails();
+    user1.logout();
+
+    console.log(`after adding cources to ${user2.name}`);
+    admin.addCourse(user2,'Javascript');
+    admin.addCourse(user2,'Python');
+    console.log(`after removing python cource from ${user2.name}`);
+    admin.removeCourse(user2,'Python')
+
+    mod.addCoins(5000);
+    mod.removeCoins(2000);
+
+    </script>
+</body>
+</html>

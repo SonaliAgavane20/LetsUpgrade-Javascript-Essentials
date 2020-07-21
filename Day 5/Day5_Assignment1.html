@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Functions</title>
+</head>
+<body>
+    <script>
+        let num = prompt("Enter a positive number : ")
+        let arr = Array.from({length:num}, (_,index) => index+1)
+        console.log("Generated array of given number : ",arr)
+        let oddNums = arr.filter(el => el%2!=0)
+        console.log("Odd numbers are : ",oddNums)
+        let oddCubes = oddNums.map(el => el**3)
+        console.log("Cube of odd numbers in array : ",oddCubes)
+    </script>
+</body>
+</html>
